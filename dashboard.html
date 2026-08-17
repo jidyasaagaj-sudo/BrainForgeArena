@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>BrainForge Dashboard</title>
+
+<link
+    rel="stylesheet"
+    href="css/dashboard.css"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+</head>
+
+
+<body>
+
+<div class="dashboard-layout">
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            🧠
+        </div>
+
+        <div>
+            <h2>BrainForge</h2>
+            <span>Arena</span>
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a
+            href="dashboard.html"
+            class="nav-item active"
+        >
+            <span>
+                <i class="fa-solid fa-house"></i>
+            </span>
+
+            <span>Dashboard</span>
+        </a>
+
+
+        <a
+            href="course.html"
+            class="nav-item"
+        >
+            <span>
+                <i class="fa-solid fa-book"></i>
+            </span>
+
+            <span>Courses</span>
+        </a>
+
+
+        <a
+            href="quiz.html"
+            class="nav-item"
+        >
+            <span>
+                <i class="fa-solid fa-pen"></i>
+            </span>
+
+            <span>Quiz</span>
+        </a>
+
+
+        <a
+            href="history.html"
+            class="nav-item"
+        >
+            <span>
+                <i class="fa-solid fa-chart-column"></i>
+            </span>
+
+            <span>Results</span>
+        </a>
+
+
+        <a
+            href="leaderboard.html"
+            class="nav-item"
+        >
+            <span>
+                <i class="fa-solid fa-trophy"></i>
+            </span>
+
+            <span>Leaderboard</span>
+        </a>
+
+
+        <a
+            href="certificate.html"
+            class="nav-item"
+        >
+            <span>
+                <i class="fa-solid fa-certificate"></i>
+            </span>
+
+            <span>Certificates</span>
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <button
+            class="logout-btn"
+            onclick="logoutUser()"
+        >
+
+            <span>
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </span>
+
+            <span>Logout</span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+<!-- TOP BAR -->
+
+<header class="topbar">
+
+    <button
+        class="menu-btn"
+        onclick="toggleSidebar()"
+    >
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+
+    <div class="topbar-spacer"></div>
+
+
+    <button
+        class="theme-btn"
+       onclick="document.body.classList.toggle('dark-mode')"
+        title="Dark Mode"
+    >
+
+        🌙
+        <span>Dark</span>
+
+    </button>
+
+
+    <button
+        class="notification-btn"
+        title="Notifications"
+    >
+
+        <i class="fa-regular fa-bell"></i>
+
+        <span class="notification-count">
+            0
+        </span>
+
+    </button>
+
+
+    <div class="profile-mini">
+
+        <div class="profile-avatar">
+            👤
+        </div>
+
+
+        <div class="profile-info">
+
+            <strong id="topStudentName">
+                Student
+            </strong>
+
+            <small>
+                Learner
+            </small>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- PAGE -->
+
+<section class="page-content">
+
+
+<!-- =====================================================
+     WELCOME
+===================================================== -->
+
+<div class="welcome-section">
+
+    <h1>
+        Welcome back,
+        <span id="studentName">
+            Student
+        </span>
+        👋
+    </h1>
+
+    <p>
+        Track your learning progress and achievements.
+    </p>
+
+</div>
+
+
+
+<!-- =====================================================
+     STAT CARDS
+===================================================== -->
+
+<div class="stats-grid">
+
+
+    <!-- ATTEMPTS -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon attempts-icon">
+            <i class="fa-solid fa-clipboard-list"></i>
+        </div>
+
+
+        <div class="stat-details">
+
+            <span>Total Attempts</span>
+
+            <strong id="attempts">
+                0
+            </strong>
+
+            <small>
+                All time attempts
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- BEST SCORE -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon score-icon">
+            <i class="fa-solid fa-star"></i>
+        </div>
+
+
+        <div class="stat-details">
+
+            <span>Best Score</span>
+
+            <strong id="bestScore">
+                0%
+            </strong>
+
+            <small>
+                Best performance
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- CERTIFICATES -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon certificate-icon">
+            <i class="fa-solid fa-certificate"></i>
+        </div>
+
+
+        <div class="stat-details">
+
+            <span>Certificates</span>
+
+            <strong id="certificates">
+                0
+            </strong>
+
+            <small>
+                Earned
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- COURSES -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon courses-icon">
+            <i class="fa-solid fa-book-open"></i>
+        </div>
+
+
+        <div class="stat-details">
+
+            <span>Courses</span>
+
+            <strong id="coursesCompleted">
+                0
+            </strong>
+
+            <small>
+                Completed
+            </small>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     COURSE PROGRESS + TOP PERFORMER
+===================================================== -->
+
+<div class="dashboard-grid">
+
+
+    <!-- COURSE PROGRESS -->
+
+    <div class="dashboard-card progress-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-header-icon">
+                    📖
+                </span>
+
+                <h2>
+                    Course Progress
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="course-progress-list">
+
+
+            <!-- HTML -->
+
+            <div class="progress-row">
+
+                <div class="progress-label">
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <strong id="htmlText">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-fill"
+                        id="htmlBar"
+                        style="width:0%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CSS -->
+
+            <div class="progress-row">
+
+                <div class="progress-label">
+
+                    <span>
+                        CSS
+                    </span>
+
+                    <strong id="cssText">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-fill"
+                        id="cssBar"
+                        style="width:0%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JAVASCRIPT -->
+
+            <div class="progress-row">
+
+                <div class="progress-label">
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <strong id="jsText">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-fill"
+                        id="jsBar"
+                        style="width:0%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WEB DEVELOPMENT -->
+
+            <div class="progress-row">
+
+                <div class="progress-label">
+
+                    <span>
+                        Web Development
+                    </span>
+
+                    <strong id="webText">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-fill"
+                        id="webBar"
+                        style="width:0%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- TOP PERFORMER -->
+
+    <div class="dashboard-card performer-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-header-icon">
+                    👑
+                </span>
+
+                <h2>
+                    Top Performer
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="performer-box">
+
+            <div class="performer-medal">
+                🏆
+            </div>
+
+
+            <div class="performer-details">
+
+                <h2 id="topName">
+                    Student
+                </h2>
+
+                <p id="topSubject">
+                    Web Development
+                </p>
+
+            </div>
+
+
+            <strong id="topPercent">
+                0%
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     RECENT RESULTS + LEADERBOARD
+===================================================== -->
+
+<div class="dashboard-grid bottom-grid">
+
+
+    <!-- RECENT RESULTS -->
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-header-icon">
+                    📊
+                </span>
+
+                <h2>
+                    Recent Quiz Results
+                </h2>
+
+            </div>
+
+
+            <button
+                class="view-btn"
+                onclick="location.href='history.html'"
+            >
+                View All
+            </button>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Subject
+                        </th>
+
+                        <th>
+                            Score
+                        </th>
+
+                        <th>
+                            Percentage
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="recentResults">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- LEADERBOARD -->
+
+    <div class="dashboard-card leaderboard-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <span class="card-header-icon">
+                    🏆
+                </span>
+
+                <h2>
+                    Leaderboard
+                </h2>
+
+            </div>
+
+
+            <button
+                class="view-btn"
+                onclick="location.href='leaderboard.html'"
+            >
+                View All
+            </button>
+
+        </div>
+
+
+        <div id="dashboardLeaderboard">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     LOGIN STREAK
+===================================================== -->
+
+<div
+    class="dashboard-card"
+    style="margin-bottom:18px;"
+>
+
+    <div class="card-header">
+
+        <div>
+
+            <span class="card-header-icon">
+                🔥
+            </span>
+
+            <h2>
+                Login Streak
+            </h2>
+
+        </div>
+
+        <strong id="streak">
+            1 Days
+        </strong>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     QUOTE
+===================================================== -->
+
+<div class="quote-card">
+
+    <div class="quote-icon">
+        “
+    </div>
+
+
+    <div>
+
+        <h3>
+            Keep Learning!
+        </h3>
+
+        <p>
+            Every quiz is one more step toward mastery.
+        </p>
+
+    </div>
+
+
+    <div class="quote-decoration">
+        📚
+    </div>
+
+</div>
+
+
+</section>
+
+</main>
+
+</div>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

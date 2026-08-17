@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leaderboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="leaderboard-page">
+
+    <!-- HEADER -->
+
+    <header class="leaderboard-header">
+
+        <div class="brand">
+            <div class="brand-icon">🧠</div>
+
+            <div>
+                <h2>BrainForge</h2>
+                <span>Arena</span>
+            </div>
+        </div>
+
+        <div class="header-buttons">
+
+            <button onclick="toggleDarkMode()">
+                🌙 Dark
+            </button>
+
+            <button onclick="location.href='dashboard.html'">
+                🏠 Dashboard
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- TITLE -->
+
+    <section class="page-title">
+
+        <div class="title-icon">
+            🏆
+        </div>
+
+        <div>
+            <h1>Leaderboard</h1>
+            <p>See the top quiz performances.</p>
+        </div>
+
+    </section>
+
+
+    <!-- LEADERBOARD CARD -->
+
+    <section class="leaderboard-card">
+
+        <div class="leaderboard-card-header">
+
+            <div class="ranking-title">
+                🏆
+                <strong>Quiz Rankings</strong>
+            </div>
+
+            <button
+                class="take-quiz-btn"
+                onclick="location.href='quiz.html'">
+                Take Quiz
+            </button>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Rank</th>
+                        <th>Student</th>
+                        <th>Subject</th>
+                        <th>Score</th>
+                        <th>Percentage</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="leaderboardBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- BUTTONS -->
+
+    <div class="leaderboard-actions">
+
+        <button
+            class="certificate-btn"
+            onclick="goCertificate()">
+            🏅 Certificates
+        </button>
+
+        <button
+            onclick="location.href='history.html'">
+            ↩ Quiz History
+        </button>
+
+        <button
+            onclick="location.href='dashboard.html'">
+            ← Back to Dashboard
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="js/leaderboard.js"></script>
+
+</body>
+</html>

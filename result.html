@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quiz Result</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="result-container">
+
+<h1>Quiz Result</h1>
+
+<h2 id="score"></h2>
+
+<h2 id="percentage"></h2>
+
+<h2 id="status"></h2>
+
+<h2 id="badge"></h2>
+
+<br>
+
+<button onclick="viewHistory()">
+View Quiz History
+</button>
+
+<button onclick="goLeaderboard()">
+Leaderboard
+</button>
+<button class="back-btn"
+onclick="location.href='dashboard.html';">
+⬅ Back
+</button>
+
+</div>
+
+<script src="js/result.js"></script>
+
+<div id="popup" class="popup">
+    <h2>🎉 Congratulations!</h2>
+    <p id="popupText"></p>
+    <button onclick="closePopup()">OK</button>
+</div>
+
+</body>
+</html>

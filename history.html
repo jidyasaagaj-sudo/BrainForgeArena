@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Attempt History</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="history-page">
+
+
+    <!-- HEADER -->
+
+    <header class="history-header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🧠
+            </div>
+
+            <div>
+
+                <h2>BrainForge</h2>
+
+                <span>Arena</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-buttons">
+
+            <button onclick="toggleDarkMode()">
+                🌙 Dark
+            </button>
+
+            <button
+                onclick="location.href='dashboard.html'">
+                🏠 Dashboard
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- TITLE -->
+
+    <section class="page-title">
+
+        <div class="title-icon">
+            📋
+        </div>
+
+        <div>
+
+            <h1>Quiz History</h1>
+
+            <p>
+                View all your quiz attempts.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HISTORY CARD -->
+
+    <section class="history-card">
+
+
+        <div class="history-card-header">
+
+            <h2>
+                📊 Quiz Attempts
+            </h2>
+
+            <span id="attemptCount">
+                0 Attempts
+            </span>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Subject</th>
+
+                        <th>Score</th>
+
+                        <th>Percentage</th>
+
+                        <th>Status</th>
+
+                        <th>Date</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="historyBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BUTTONS -->
+
+    <div class="history-actions">
+
+        <button
+            onclick="location.href='leaderboard.html'">
+
+            🏆 Leaderboard
+
+        </button>
+
+
+        <button
+            onclick="location.href='dashboard.html'">
+
+            ← Back to Dashboard
+
+        </button>
+
+    </div>
+
+
+</div>
+
+
+<script src="js/history.js"></script>
+
+</body>
+
+</html>

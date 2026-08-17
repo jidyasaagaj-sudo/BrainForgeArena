@@ -1,0 +1,1492 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#F5F5DC;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.login-box{
+width:420px;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 0 15px rgba(111,78,55,0.2);
+}
+
+h1{
+text-align:center;
+color:#6F4E37;
+}
+
+h2,h3{
+text-align:center;
+margin:15px 0;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#A67B5B;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#8B5A2B;
+}
+
+hr{
+margin:20px 0;
+}
+.login-box{
+width:450px;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 0 15px rgba(111,78,55,0.2);
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+p{
+text-align:center;
+margin:15px 0;
+}
+
+button{
+font-size:16px;
+}
+.quiz-container{
+
+width:800px;
+
+margin:30px auto;
+
+padding:25px;
+
+background:white;
+
+border-radius:10px;
+
+box-shadow:0 0 10px rgba(0,0,0,.2);
+
+}
+
+#timer{
+
+font-size:22px;
+
+font-weight:bold;
+
+color:red;
+
+margin-bottom:20px;
+
+text-align:center;
+
+}
+
+#question{
+
+margin-bottom:20px;
+
+}
+
+.option{
+
+display:block;
+
+padding:12px;
+
+margin:10px 0;
+
+background:#f1f5f9;
+
+border-radius:5px;
+
+cursor:pointer;
+
+}
+
+.option:hover{
+
+background:#dbeafe;
+
+}
+.result-container{
+
+width:800px;
+
+margin:40px auto;
+
+background:white;
+
+padding:25px;
+
+border-radius:10px;
+
+box-shadow:0 0 10px rgba(0,0,0,.2);
+
+text-align:center;
+
+}
+
+table{
+
+border-collapse:collapse;
+
+margin-top:20px;
+
+}
+
+th,td{
+
+padding:10px;
+
+}
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+th{
+
+background:#A67B5B;
+
+color:white;
+
+}
+
+th,td{
+
+padding:10px;
+
+text-align:center;
+
+}
+.certificate{
+
+width:900px;
+
+margin:30px auto;
+
+padding:40px;
+
+border:10px solid #6F4E37;
+
+background:#fff;
+
+text-align:center;
+
+box-shadow:0 0 15px rgba(0,0,0,.3);
+
+}
+
+.certificate h1{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+color:#6F4E37;
+
+}
+
+.certificate h2{
+
+font-size:35px;
+
+margin:20px 0;
+
+}
+
+.certificate h3{
+
+margin:15px 0;
+
+}
+
+.signature{
+
+margin-top:40px;
+
+font-size:18px;
+
+}
+
+@media print{
+
+button{
+
+display:none;
+
+}
+
+}
+.back-btn{
+width:100%;
+padding:14px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+background:#8B5A2B;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+.back-btn:hover{
+	background:#8B5A2B;
+}
+.progress-container{
+    width:100%;
+    height:12px;
+    background:#E8DCCB;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+#progressBar{
+    width:0%;
+    height:100%;
+    background:#A67B5B;
+    border-radius:10px;
+    transition:0.3s;
+}
+#badge{
+    color:#6F4E37;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.popup{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:#FFFFFF;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    z-index:9999;
+}
+
+#countdownScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#F5F5DC;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+#countdownText{
+font-size:120px;
+font-weight:bold;
+color:#6F4E37;
+}
+#countdownScreen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#F5F5DC;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#countdownText{
+    font-size:120px;
+    font-weight:bold;
+    color:#6F4E37;
+}
+.certificate{
+width:900px;
+margin:30px auto;
+padding:40px;
+background:white;
+border:10px solid #6F4E37;
+text-align:center;
+border-radius:20px;
+box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+.certificate h1{
+color:#6F4E37;
+font-size:40px;
+}
+
+.certificate h2{
+font-size:32px;
+color:#A67B5B;
+}
+
+.certificate h3{
+color:#444;
+}
+
+.signature{
+margin-top:40px;
+font-weight:bold;
+}
+.student-form h1{
+text-align:center;
+margin-bottom:25px;
+color:#6F4E37;
+font-size:42px;
+}
+.title{
+text-align:center;
+color:#6F4E37;
+font-size:42px;
+margin-top:40px;
+margin-bottom:30px;
+width:100%;
+}
+
+#studentForm{
+max-width:700px;
+margin:0 auto;
+}
+body{
+background:#F5F5DC;
+height:auto;
+}
+
+h1{
+text-align:center;
+margin-top:30px;
+margin-bottom:30px;
+color:#6F4E37;
+}
+
+#studentForm{
+width:700px;
+max-width:90%;
+margin:0 auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+/* =====================================================
+   BRAINFO RGE - LEADERBOARD ONLY
+   ===================================================== */
+
+.leaderboard-page{
+    width:100%;
+    min-height:100vh;
+
+    background:#F5F5DC;
+
+    padding:35px 7% 45px;
+
+    color:#3E2A1F;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.leaderboard-page .leaderboard-header{
+    width:100%;
+    max-width:1100px;
+
+    margin:0 auto 45px;
+
+    padding:20px 28px;
+
+    background:linear-gradient(
+        135deg,
+        #6F4E37,
+        #A67B5B
+    );
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    box-shadow:
+        0 8px 22px rgba(111,78,55,0.22);
+
+    color:white;
+}
+
+
+.leaderboard-page .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+
+.leaderboard-page .brand-icon{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#F5E6D0;
+
+    border-radius:14px;
+
+    font-size:25px;
+}
+
+
+.leaderboard-page .brand h2{
+    margin:0;
+
+    color:white;
+
+    text-align:left;
+}
+
+
+.leaderboard-page .brand span{
+    color:#F5E6D0;
+    font-size:14px;
+}
+
+
+.leaderboard-page .header-buttons{
+    display:flex;
+    gap:10px;
+}
+
+
+.leaderboard-page .header-buttons button{
+    width:auto;
+
+    padding:11px 18px;
+
+    background:rgba(255,255,255,0.16);
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:10px;
+
+    font-size:14px;
+
+    box-shadow:none;
+}
+
+
+.leaderboard-page .header-buttons button:hover{
+    background:rgba(255,255,255,0.28);
+}
+
+
+/* =====================================================
+   PAGE TITLE
+   ===================================================== */
+
+.leaderboard-page .page-title{
+    max-width:1100px;
+
+    margin:0 auto 28px;
+
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+
+.leaderboard-page .title-icon{
+    font-size:42px;
+}
+
+
+.leaderboard-page .page-title h1{
+    margin:0;
+
+    color:#6F4E37;
+
+    font-size:38px;
+
+    text-align:left;
+}
+
+
+.leaderboard-page .page-title p{
+    margin:5px 0 0;
+
+    text-align:left;
+
+    color:#7A6659;
+
+    font-size:16px;
+}
+
+
+/* =====================================================
+   MAIN LEADERBOARD CARD
+   ===================================================== */
+
+.leaderboard-page .leaderboard-card{
+    width:100%;
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:24px;
+
+    background:#FFFDF8;
+
+    border:1px solid #E4D2BA;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 8px 25px rgba(111,78,55,0.15);
+}
+
+
+/* =====================================================
+   CARD HEADER
+   ===================================================== */
+
+.leaderboard-page .leaderboard-card-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin-bottom:20px;
+}
+
+
+.leaderboard-page .ranking-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-size:19px;
+
+    color:#6F4E37;
+}
+
+
+.leaderboard-page .take-quiz-btn{
+    width:auto;
+
+    padding:12px 28px;
+
+    background:linear-gradient(
+        135deg,
+        #A67B5B,
+        #8B5A2B
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    box-shadow:
+        0 4px 10px rgba(111,78,55,0.20);
+}
+
+
+.leaderboard-page .take-quiz-btn:hover{
+    background:#6F4E37;
+
+    transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+
+.leaderboard-page .table-wrapper{
+    width:100%;
+
+    overflow-x:auto;
+
+    border:2px solid #E3CEB2;
+
+    border-radius:16px;
+
+    background:white;
+
+    box-shadow:
+        0 4px 15px rgba(111,78,55,0.08);
+}
+
+
+.leaderboard-page table{
+    width:100%;
+
+    margin:0;
+
+    border-collapse:separate;
+
+    border-spacing:0;
+
+    background:white;
+}
+
+
+/* HEADER */
+
+.leaderboard-page table th{
+    padding:16px 14px;
+
+    background:linear-gradient(
+        135deg,
+        #8B5A2B,
+        #A67B5B
+    );
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    border:none;
+}
+
+
+/* FIRST HEADER */
+
+.leaderboard-page table th:first-child{
+    border-top-left-radius:12px;
+}
+
+
+/* LAST HEADER */
+
+.leaderboard-page table th:last-child{
+    border-top-right-radius:12px;
+}
+
+
+/* CELLS */
+
+.leaderboard-page table td{
+    padding:16px 14px;
+
+    text-align:center;
+
+    color:#4A382C;
+
+    background:#FFFDF8;
+
+    border-bottom:1px solid #E8DCCB;
+
+    font-size:15px;
+}
+
+
+/* REMOVE LAST BORDER */
+
+.leaderboard-page table tbody tr:last-child td{
+    border-bottom:none;
+}
+
+
+/* HOVER */
+
+.leaderboard-page table tbody tr:hover td{
+    background:#F8F0E5;
+}
+
+
+/* RANK */
+
+.leaderboard-page table td:first-child{
+    font-weight:bold;
+
+    color:#8B5A2B;
+}
+
+
+/* PERCENTAGE */
+
+.leaderboard-page table td:last-child{
+    font-weight:bold;
+
+    color:#6F4E37;
+}
+
+
+/* TOP RANK */
+
+.leaderboard-page table tbody tr:first-child td{
+    background:#FFF7E6;
+}
+
+
+/* =====================================================
+   BOTTOM BUTTONS
+   ===================================================== */
+
+.leaderboard-page .leaderboard-actions{
+    width:100%;
+    max-width:1100px;
+
+    margin:22px auto 0;
+
+    display:grid;
+
+    gap:10px;
+}
+
+
+.leaderboard-page .leaderboard-actions button{
+    width:100%;
+
+    padding:14px;
+
+    background:#FFFDF8;
+
+    color:#6F4E37;
+
+    border:1px solid #D8C3A5;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    box-shadow:none;
+}
+
+
+.leaderboard-page .leaderboard-actions button:hover{
+    background:#F3E6D3;
+
+    border-color:#A67B5B;
+
+    transform:translateY(-1px);
+}
+
+
+/* CERTIFICATE BUTTON */
+
+.leaderboard-page .leaderboard-actions .certificate-btn{
+    background:linear-gradient(
+        135deg,
+        #A67B5B,
+        #8B5A2B
+    );
+
+    color:white;
+
+    border:none;
+}
+
+
+.leaderboard-page .leaderboard-actions .certificate-btn:hover{
+    background:#6F4E37;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media(max-width:700px){
+
+    .leaderboard-page{
+        padding:20px 12px 30px;
+    }
+
+    .leaderboard-page .leaderboard-header{
+        flex-direction:column;
+        gap:15px;
+
+        padding:18px;
+    }
+
+    .leaderboard-page .header-buttons{
+        width:100%;
+    }
+
+    .leaderboard-page .header-buttons button{
+        flex:1;
+    }
+
+    .leaderboard-page .page-title h1{
+        font-size:30px;
+    }
+
+    .leaderboard-page .leaderboard-card{
+        padding:15px;
+    }
+
+    .leaderboard-page .leaderboard-card-header{
+        flex-direction:column;
+        align-items:stretch;
+        gap:15px;
+    }
+
+    .leaderboard-page .take-quiz-btn{
+        width:100%;
+    }
+
+}
+
+/* =====================================================
+   ATTEMPT HISTORY - ATTRACTIVE DESIGN
+===================================================== */
+
+.history-page{
+    width:900px;
+    max-width:92%;
+    margin:40px auto;
+    padding:25px;
+}
+
+
+/* HEADER */
+
+.history-page .history-header{
+    background:#6F4E37;
+    color:white;
+    padding:18px 25px;
+    border-radius:14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 6px 18px rgba(111,78,55,0.18);
+}
+
+.history-page .history-header .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.history-page .history-header .brand-icon{
+    font-size:28px;
+}
+
+.history-page .history-header h2{
+    margin:0;
+    color:white;
+}
+
+.history-page .history-header span{
+    color:#F5F5DC;
+}
+
+
+/* HEADER BUTTONS */
+
+.history-page .header-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.history-page .header-buttons button{
+    width:auto;
+    padding:10px 18px;
+    background:#A67B5B;
+    border-radius:8px;
+    color:white;
+}
+
+.history-page .header-buttons button:hover{
+    background:#8B5A2B;
+}
+
+
+/* PAGE TITLE */
+
+.history-page .page-title{
+    text-align:center;
+    margin:40px 0 25px;
+}
+
+.history-page .page-title h1{
+    color:#6F4E37;
+    font-size:38px;
+    margin:8px 0;
+}
+
+.history-page .page-title p{
+    color:#555;
+}
+
+
+/* HISTORY CARD */
+
+.history-page .history-card{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 8px 25px rgba(111,78,55,0.14);
+    border:1px solid #E8DCCB;
+}
+
+.history-page .history-card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.history-page .history-card-header h2{
+    color:#6F4E37;
+    margin:0;
+}
+
+
+/* TABLE */
+
+.history-page .table-wrapper{
+    overflow-x:auto;
+}
+
+.history-page table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    overflow:hidden;
+    border-radius:12px;
+    background:white;
+}
+
+.history-page table th{
+    background:#6F4E37;
+    color:white;
+    padding:14px 12px;
+    font-size:15px;
+}
+
+.history-page table td{
+    padding:14px 12px;
+    text-align:center;
+    border-bottom:1px solid #E8DCCB;
+    color:#444;
+}
+
+.history-page table tbody tr:hover{
+    background:#F8F1E8;
+}
+
+.history-page table tbody tr:last-child td{
+    border-bottom:none;
+}
+
+
+/* PASS / FAIL */
+
+.history-page .status-pass{
+    color:#2E7D32;
+    font-weight:bold;
+    background:#E8F5E9;
+    padding:6px 12px;
+    border-radius:20px;
+}
+
+.history-page .status-fail{
+    color:#C62828;
+    font-weight:bold;
+    background:#FFEBEE;
+    padding:6px 12px;
+    border-radius:20px;
+}
+
+
+/* BOTTOM BUTTONS */
+
+.history-page .history-actions{
+    margin-top:22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.history-page .history-actions button{
+    background:#A67B5B;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:13px;
+    font-size:16px;
+}
+
+.history-page .history-actions button:hover{
+    background:#8B5A2B;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .history-page{
+        width:95%;
+        padding:10px;
+    }
+
+    .history-page .history-header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .history-page .header-buttons{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .history-page .header-buttons button{
+        width:100%;
+    }
+
+    .history-page .page-title h1{
+        font-size:30px;
+    }
+
+}
+
+/* ==========================================
+   LEADERBOARD DARK MODE ONLY
+========================================== */
+
+body.dark-mode .leaderboard-page{
+    background:#1f1f1f;
+    color:#ffffff;
+}
+
+body.dark-mode .leaderboard-page .leaderboard-header{
+    background:#292929;
+    color:#ffffff;
+}
+
+body.dark-mode .leaderboard-page .page-title{
+    color:#ffffff;
+}
+
+body.dark-mode .leaderboard-page .page-title h1{
+    color:#ffffff;
+}
+
+body.dark-mode .leaderboard-page .page-title p{
+    color:#cccccc;
+}
+
+body.dark-mode .leaderboard-page .leaderboard-card{
+    background:#292929;
+    color:#ffffff;
+}
+
+body.dark-mode .leaderboard-page .leaderboard-card-header{
+    color:#ffffff;
+}
+
+body.dark-mode .leaderboard-page table{
+    background:#292929;
+    color:#ffffff;
+}
+
+body.dark-mode .leaderboard-page tbody tr{
+    background:#292929;
+    color:#ffffff;
+}
+
+body.dark-mode .leaderboard-page tbody td{
+    color:#ffffff;
+    border-color:#444444;
+}
+
+body.dark-mode .leaderboard-page .leaderboard-actions{
+    color:#ffffff;
+}
+/* DARK MODE - TEXT VISIBILITY FIX */
+
+body.dark-mode .leaderboard-page table tbody tr,
+body.dark-mode .leaderboard-page table tbody td {
+    background:#292929;
+    color:#ffffff;
+}
+
+body.dark-mode .leaderboard-page .leaderboard-actions button {
+    background:#292929;
+    color:#ffffff;
+    border:1px solid #555;
+}
+
+body.dark-mode .leaderboard-page .leaderboard-actions button:hover {
+    background:#3a3a3a;
+    color:#ffffff;
+}
+
+body.dark-mode .leaderboard-page .ranking-title,
+body.dark-mode .leaderboard-page .ranking-title strong {
+    color:#ffffff;
+}
+/* DARK MODE TABLE HEADINGS */
+
+body.dark-mode .leaderboard-page table thead th{
+    background:#333333;
+    color:#ffffff;
+}
+
+/* =====================================================
+   COMMON DARK MODE
+   Same colour combination as Leaderboard
+===================================================== */
+
+body.dark-mode{
+    background:#1f1f1f;
+    color:#ffffff;
+}
+
+/* =====================================================
+   DASHBOARD DARK MODE
+===================================================== */
+
+body.dark-mode .dashboard-page{
+    background:#1f1f1f;
+    color:#ffffff;
+}
+
+body.dark-mode .dashboard-page .card,
+body.dark-mode .dashboard-page .dashboard-card,
+body.dark-mode .dashboard-page .course-card,
+body.dark-mode .dashboard-page .stat-card,
+body.dark-mode .dashboard-page .progress-card{
+    background:#292929;
+    color:#ffffff;
+    border-color:#444444;
+}
+
+body.dark-mode .dashboard-page h1,
+body.dark-mode .dashboard-page h2,
+body.dark-mode .dashboard-page h3,
+body.dark-mode .dashboard-page h4,
+body.dark-mode .dashboard-page p,
+body.dark-mode .dashboard-page span{
+    color:#ffffff;
+}
+
+body.dark-mode .dashboard-page .topbar,
+body.dark-mode .dashboard-page .navbar,
+body.dark-mode .dashboard-page header{
+    background:#292929;
+    color:#ffffff;
+}
+
+body.dark-mode .dashboard-page button{
+    color:#ffffff;
+}
+
+body.dark-mode .dashboard-page table{
+    background:#292929;
+    color:#ffffff;
+}
+
+body.dark-mode .dashboard-page th{
+    background:#333333;
+    color:#ffffff;
+}
+
+body.dark-mode .dashboard-page td{
+    background:#292929;
+    color:#ffffff;
+    border-color:#444444;
+}
+
+
+/* =====================================================
+   QUIZ HISTORY DARK MODE
+===================================================== */
+
+body.dark-mode .history-page{
+    background:#1f1f1f;
+    color:#ffffff;
+}
+
+body.dark-mode .history-page .history-header{
+    background:#292929;
+    color:#ffffff;
+}
+
+body.dark-mode .history-page .history-header h2,
+body.dark-mode .history-page .history-header span{
+    color:#ffffff;
+}
+
+body.dark-mode .history-page .page-title h1{
+    color:#ffffff;
+}
+
+body.dark-mode .history-page .page-title p{
+    color:#cccccc;
+}
+
+body.dark-mode .history-page .history-card{
+    background:#292929;
+    color:#ffffff;
+    border-color:#444444;
+}
+
+body.dark-mode .history-page .history-card-header h2{
+    color:#ffffff;
+}
+
+body.dark-mode .history-page table{
+    background:#292929;
+    color:#ffffff;
+}
+
+body.dark-mode .history-page table th{
+    background:#333333;
+    color:#ffffff;
+}
+
+body.dark-mode .history-page table td{
+    background:#292929;
+    color:#ffffff;
+    border-color:#444444;
+}
+
+body.dark-mode .history-page table tbody tr:hover td{
+    background:#3a3a3a;
+    color:#ffffff;
+}
+
+body.dark-mode .history-page .history-actions button{
+    background:#292929;
+    color:#ffffff;
+    border:1px solid #555555;
+}
+
+body.dark-mode .history-page .history-actions button:hover{
+    background:#3a3a3a;
+    color:#ffffff;
+}
+
+/* =====================================================
+   DASHBOARD DARK MODE
+   Same theme as Leaderboard
+===================================================== */
+
+body.dark-mode {
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+body.dark-mode .dashboard-layout {
+    background: #1f1f1f;
+}
+
+/* SIDEBAR */
+
+body.dark-mode .sidebar {
+    background: #292929;
+    color: #ffffff;
+}
+
+body.dark-mode .sidebar .brand h2,
+body.dark-mode .sidebar .brand span,
+body.dark-mode .sidebar .nav-item,
+body.dark-mode .sidebar .nav-item span,
+body.dark-mode .sidebar .nav-item i {
+    color: #ffffff;
+}
+
+body.dark-mode .sidebar .nav-item:hover,
+body.dark-mode .sidebar .nav-item.active {
+    background: #3a3a3a;
+    color: #ffffff;
+}
+
+/* MAIN CONTENT */
+
+body.dark-mode .main-content {
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+/* TOPBAR */
+
+body.dark-mode .topbar {
+    background: #292929;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode .theme-btn,
+body.dark-mode .notification-btn {
+    background: #333333;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+body.dark-mode .profile-info strong,
+body.dark-mode .profile-info small {
+    color: #ffffff;
+}
+
+/* WELCOME */
+
+body.dark-mode .welcome-section h1,
+body.dark-mode .welcome-section p {
+    color: #ffffff;
+}
+
+/* STAT CARDS */
+
+body.dark-mode .stat-card {
+    background: #292929;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode .stat-card span,
+body.dark-mode .stat-card strong,
+body.dark-mode .stat-card small {
+    color: #ffffff;
+}
+
+/* DASHBOARD CARDS */
+
+body.dark-mode .dashboard-card {
+    background: #292929;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode .card-header h2,
+body.dark-mode .card-header span,
+body.dark-mode .card-header strong {
+    color: #ffffff;
+}
+
+/* COURSE PROGRESS */
+
+body.dark-mode .progress-label span,
+body.dark-mode .progress-label strong {
+    color: #ffffff;
+}
+
+body.dark-mode .progress-track {
+    background: #444444;
+}
+
+/* TOP PERFORMER */
+
+body.dark-mode .performer-box {
+    background: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .performer-details h2,
+body.dark-mode .performer-details p,
+body.dark-mode .performer-box > strong {
+    color: #ffffff;
+}
+
+/* TABLE */
+
+body.dark-mode .table-wrapper {
+    background: #292929;
+}
+
+body.dark-mode .dashboard-table {
+    background: #292929;
+    color: #ffffff;
+}
+
+body.dark-mode .dashboard-table th {
+    background: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .dashboard-table td {
+    background: #292929;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode .dashboard-table tbody tr:hover td {
+    background: #3a3a3a;
+    color: #ffffff;
+}
+
+/* VIEW BUTTON */
+
+body.dark-mode .view-btn {
+    background: #333333;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+body.dark-mode .view-btn:hover {
+    background: #3a3a3a;
+}
+
+/* LOGIN STREAK */
+
+body.dark-mode .dashboard-card[style] {
+    background: #292929 !important;
+    color: #ffffff;
+}
+
+body.dark-mode .dashboard-card[style] strong {
+    color: #ffffff;
+}
+
+/* QUOTE */
+
+body.dark-mode .quote-card {
+    background: #292929;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode .quote-card h3,
+body.dark-mode .quote-card p {
+    color: #ffffff;
+}
